@@ -11,6 +11,8 @@
 		11A07314281AD12F0066BEA0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A07313281AD12F0066BEA0 /* ContentView.swift */; };
 		11A07316281AD1320066BEA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A07315281AD1320066BEA0 /* Assets.xcassets */; };
 		11A07319281AD1320066BEA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A07318281AD1320066BEA0 /* Preview Assets.xcassets */; };
+		11A07320281AD55E0066BEA0 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A0731F281AD55E0066BEA0 /* Story.swift */; };
+		11A07322281AD7EB0066BEA0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A07321281AD7EB0066BEA0 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		11A07313281AD12F0066BEA0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		11A07315281AD1320066BEA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11A07318281AD1320066BEA0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		11A0731F281AD55E0066BEA0 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		11A07321281AD7EB0066BEA0 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				11A07313281AD12F0066BEA0 /* ContentView.swift */,
 				11A07315281AD1320066BEA0 /* Assets.xcassets */,
 				11A07317281AD1320066BEA0 /* Preview Content */,
+				11A0731F281AD55E0066BEA0 /* Story.swift */,
+				11A07321281AD7EB0066BEA0 /* DataService.swift */,
 			);
 			path = "Coding Challenge";
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			files = (
 				11A07314281AD12F0066BEA0 /* ContentView.swift in Sources */,
 				11A07312281AD12F0066BEA0 /* Coding_ChallengeApp.swift in Sources */,
+				11A07320281AD55E0066BEA0 /* Story.swift in Sources */,
+				11A07322281AD7EB0066BEA0 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
