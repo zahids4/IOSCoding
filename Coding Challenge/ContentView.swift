@@ -11,7 +11,9 @@ struct ContentView: View {
     var body: some View {
         Text("Hello, world!")
             .padding().onAppear {
-                DataService.shared.fetchStories()
+                Task {
+                    await DataService.shared.fetchStories()
+                }
             }
     }
 }

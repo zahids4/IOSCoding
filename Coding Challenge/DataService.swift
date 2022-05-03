@@ -7,10 +7,17 @@
 
 import Foundation
 
+
+
 class DataService {
     static let shared = DataService()
     
-    func fetchStories() {
+    func getRequest(withURL url: URL) async throws -> DataWithPagination {
+        let (data, _) = try await URLSession.shared.data(from: url)
+        return try JSONDecoder().decode(DataWithPagination.self, from: data)
+    }
+    
+    func fetchStories() async {
         var componentURL = URLComponents()
         componentURL.scheme = "https"
         componentURL.host = "www.wattpad.com"
@@ -26,24 +33,36 @@ class DataService {
             print("URL creation failed...")
             return
         }
+        do {
+            let dataWithPagination = try await getRequest(withURL: dataURL)
+            for story in dataWithPagination.stories {
+                print("\(story)\n")
+            }
+            print(dataWithPagination.nextUrl)
+        } catch {
+            print("Request failed with error: \(error)")
+        }
         
-        URLSession.shared.dataTask(with: dataURL) {
-            (data, response, error) in
-            guard let validData = data, error == nil else {
-                print("API error \(error!.localizedDescription)")
-                return
-            }
-            
-            do {
-                let dataWithPagination = try JSONDecoder().decode(DataWithPagination.self, from: validData)
-                for story in dataWithPagination.stories {
-                    print("\(story)\n")
-                }
-                print(dataWithPagination.nextUrl)
-            } catch let serializationError {
-                print("Fail to decode")
-                print(serializationError.localizedDescription)
-            }
-        }.resume()
+        
+//        URLSession.shared.dataTask(with: dataURL) {
+//            (data, response, error) in
+//            guard let validData = data, error == nil else {
+//                print("API error \(error!.localizedDescription)")
+//                return
+//            }
+//
+//            do {
+//                let dataWithPagination = try JSONDecoder().decode(DataWithPagination.self, from: validData)
+//                for story in dataWithPagination.stories {
+//                    print("\(story)\n")
+//                }
+//                print(dataWithPagination.nextUrl)
+//            } catch let serializationError {
+//                print("Fail to decode")
+//                print(serializationError.localizedDescription)
+//            }
+//        }.resume()
+        
+        
     }
 }
