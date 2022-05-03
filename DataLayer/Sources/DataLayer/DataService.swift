@@ -11,8 +11,6 @@ public protocol APIProviderInterface {
     func fetchStories() async
 }
 
-
-
 public class DataService: APIProviderInterface {
     public static let shared = DataService()
     
