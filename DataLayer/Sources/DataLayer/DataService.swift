@@ -7,9 +7,13 @@
 
 import Foundation
 
+public protocol APIProviderInterface {
+    func fetchStories() async
+}
 
 
-public class DataService {
+
+public class DataService: APIProviderInterface {
     public static let shared = DataService()
     
     func getRequest(withURL url: URL) async throws -> DataWithPagination {
