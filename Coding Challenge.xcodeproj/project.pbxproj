@@ -11,8 +11,7 @@
 		11A07314281AD12F0066BEA0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A07313281AD12F0066BEA0 /* ContentView.swift */; };
 		11A07316281AD1320066BEA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A07315281AD1320066BEA0 /* Assets.xcassets */; };
 		11A07319281AD1320066BEA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A07318281AD1320066BEA0 /* Preview Assets.xcassets */; };
-		11A07320281AD55E0066BEA0 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A0731F281AD55E0066BEA0 /* Story.swift */; };
-		11A07322281AD7EB0066BEA0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A07321281AD7EB0066BEA0 /* DataService.swift */; };
+		11E1D6432821AB4C001E8937 /* DataLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 11E1D6422821AB4C001E8937 /* DataLayer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,8 +20,7 @@
 		11A07313281AD12F0066BEA0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		11A07315281AD1320066BEA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11A07318281AD1320066BEA0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		11A0731F281AD55E0066BEA0 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
-		11A07321281AD7EB0066BEA0 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		11E1D6402821A8ED001E8937 /* DataLayer */ = {isa = PBXFileReference; lastKnownFileType = text; path = DataLayer; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11E1D6432821AB4C001E8937 /* DataLayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +40,7 @@
 			children = (
 				11A07310281AD12F0066BEA0 /* Coding Challenge */,
 				11A0730F281AD12F0066BEA0 /* Products */,
+				11E1D6412821AB4C001E8937 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,12 +55,11 @@
 		11A07310281AD12F0066BEA0 /* Coding Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				11E1D6402821A8ED001E8937 /* DataLayer */,
 				11A07311281AD12F0066BEA0 /* Coding_ChallengeApp.swift */,
 				11A07313281AD12F0066BEA0 /* ContentView.swift */,
 				11A07315281AD1320066BEA0 /* Assets.xcassets */,
 				11A07317281AD1320066BEA0 /* Preview Content */,
-				11A0731F281AD55E0066BEA0 /* Story.swift */,
-				11A07321281AD7EB0066BEA0 /* DataService.swift */,
 			);
 			path = "Coding Challenge";
 			sourceTree = "<group>";
@@ -71,6 +70,13 @@
 				11A07318281AD1320066BEA0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		11E1D6412821AB4C001E8937 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +95,9 @@
 			dependencies = (
 			);
 			name = "Coding Challenge";
+			packageProductDependencies = (
+				11E1D6422821AB4C001E8937 /* DataLayer */,
+			);
 			productName = "Coding Challenge";
 			productReference = 11A0730E281AD12F0066BEA0 /* Coding Challenge.app */;
 			productType = "com.apple.product-type.application";
@@ -145,8 +154,6 @@
 			files = (
 				11A07314281AD12F0066BEA0 /* ContentView.swift in Sources */,
 				11A07312281AD12F0066BEA0 /* Coding_ChallengeApp.swift in Sources */,
-				11A07320281AD55E0066BEA0 /* Story.swift in Sources */,
-				11A07322281AD7EB0066BEA0 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +354,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		11E1D6422821AB4C001E8937 /* DataLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DataLayer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11A07306281AD12F0066BEA0 /* Project object */;
 }

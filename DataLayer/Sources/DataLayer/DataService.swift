@@ -9,15 +9,15 @@ import Foundation
 
 
 
-class DataService {
-    static let shared = DataService()
+public class DataService {
+    public static let shared = DataService()
     
     func getRequest(withURL url: URL) async throws -> DataWithPagination {
         let (data, _) = try await URLSession.shared.data(from: url)
         return try JSONDecoder().decode(DataWithPagination.self, from: data)
     }
     
-    func fetchStories() async {
+    public func fetchStories() async {
         var componentURL = URLComponents()
         componentURL.scheme = "https"
         componentURL.host = "www.wattpad.com"
