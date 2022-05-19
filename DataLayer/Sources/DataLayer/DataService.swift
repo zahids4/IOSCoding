@@ -9,15 +9,11 @@ import Foundation
 
 public protocol APIProviderInterface {
     func fetchStories() async
+    func fetchUsers() async
 }
 
 public class DataService: APIProviderInterface {
     public static let shared = DataService()
-    
-    func getRequest(withURL url: URL) async throws -> DataWithPagination {
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return try JSONDecoder().decode(DataWithPagination.self, from: data)
-    }
     
     public func fetchStories() async {
         var componentURL = URLComponents()
@@ -67,4 +63,18 @@ public class DataService: APIProviderInterface {
         
         
     }
+    
+    public func fetchUsers() async {
+        /// no -op
+    }
+}
+
+extension DataService {
+    func getRequest(withURL url: URL) async throws -> DataWithPagination {
+        // chnage implementation in one place fro UrlSession to AlamoFire
+        let (data, _) = try await URLSession.shared.data(from: url)
+        return try JSONDecoder().decode(DataWithPagination.self, from: data)
+    }
+
+    /// put,
 }
